@@ -3,95 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>电话卡销售</title>
+    <title>个人博客</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
             margin: 0;
             padding: 0;
+            position: relative; /* Add this line */
         }
-        header {
-            background-color: #333;
-            color: #fff;
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #fff;
             padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .sidebar {
+            flex: 0 0 30%;
+            padding-right: 20px;
+            border-right: 1px solid #ccc;
+        }
+        .main-content {
+            flex: 1;
+            padding-left: 20px;
+        }
+        h1, h2, h3 {
+            color: #555;
             text-align: center;
         }
-        nav {
-            background-color: #444;
-            color: #fff;
-            padding: 10px 0;
+        .menu {
+            margin-bottom: 20px;
             text-align: center;
         }
-        nav a {
-            color: #fff;
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .menu li {
+            margin-right: 10px;
+        }
+        .menu li:last-child {
+            margin-right: 0;
+        }
+        .menu a {
             text-decoration: none;
-            margin: 0 10px;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
-        main {
-            padding: 20px;
+        .menu a:hover {
+            background-color: #eee;
         }
-        footer {
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .photo {
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .personal-info {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .personal-info p {
+            margin-bottom: 10px;
+        }
+        .quote {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .quote blockquote {
+            font-style: italic;
+            padding-left: 20px;
+            border-left: 3px solid #555;
+        }
+        /* Add this section for the scroll-to-top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
             background-color: #333;
             color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .card {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-        .card h3 {
-            margin-top: 0;
-        }
-        .card p {
-            margin-bottom: 0;
-        }
-        .profile {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .profile img {
-            width: 150px;
+            border: none;
             border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+        }
+        .scroll-to-top:hover {
+            background-color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 90%;
+            }
+            .sidebar, .main-content {
+                padding: 0;
+                border: none;
+                width: 100%;
+            }
+        }
+
+        .avatar {
+            width: 100px; /* 调整头像的宽度 */
+            height: 100px; /* 调整头像的高度 */
+            border-radius: 50%; /* 将头像变成圆形 */
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>欢迎来到电话卡销售</h1>
-    </header>
-    <nav>
-        <a href="#">首页</a>
-        <a href="#">套餐</a>
-        <a href="#">充值</a>
-        <a href="#">关于我们</a>
-    </nav>
-    <main>
-        <div class="profile">
-            <img src="https://picss.sunbangyan.cn/2024/02/26/9013b468c3b207fc74825264ca088276.jpeg" alt="个人头像">
-            <h2>欢迎来到我的电话卡销售页面</h2>
-            <p>我是小娟娟，负责为您提供最优质的电话卡套餐和服务。</p>
+    <div class="container">
+        <div class="sidebar">
+            <div class="menu">
+                <h2>导航</h2>
+                <ul>
+                    <li><a href="#personal-info">个人信息</a></li>
+                    <li><a href="#favorite-quote">喜欢的语句</a></li>
+                    <li><a href="#photo-gallery">照片集</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="card">
-            <h3>话费充值</h3>
-            <p>选择适合您的充值套餐，轻松充值话费。</p>
+        <div class="main-content">
+            
+            <div id="personal-info" class="personal-info">
+                <h2>个人信息</h2>
+                <!-- 添加头像 -->
+                <img src="https://picss.sunbangyan.cn/2024/02/26/9013b468c3b207fc74825264ca088276.jpeg" alt="个人头像" class="avatar">
+                <p>姓名：小娟娟</p>
+                <p>年龄：19岁</p>
+                <p>职业：学生</p>
+                <!-- 添加更多个人信息 -->
+            </div>
+
+            <div id="favorite-quote" class="quote">
+                <h2>喜欢的语句</h2>
+                <blockquote>
+                    <p>风吹哪页读哪页！</p>
+                </blockquote>
+                <!-- Add more favorite quotes as needed -->
+            </div>
+                     
+            <div id="photo-gallery" class="photo-gallery">
+                <h2>照片集</h2>
+                <div class="photo">
+                    <img src="https://source.unsplash.com/1600x900/?nature,star" alt="Photo 1">
+                </div>
+                <div class="photo">
+                    <img src="https://source.unsplash.com/1600x900/?nature,month" alt="Photo 2">
+                </div>
+                <!-- Add more photos as needed -->
+            </div>
         </div>
-        <div class="card">
-            <h3>流量套餐</h3>
-            <p>选择适合您的流量套餐，畅享高速上网体验。</p>
-        </div>
-        <div class="card">
-            <h3>国际漫游</h3>
-            <p>出国旅行，畅享畅通无阻的国际漫游服务。</p>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 电话卡销售</p>
-    </footer>
+    </div>
+
+    <!-- Add the scroll-to-top button -->
+    <button class="scroll-to-top" onclick="scrollToTop()">&#8679;</button>
+
+    <script>
+        // JavaScript function to scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // JavaScript function to show/hide the scroll-to-top button based on scroll position
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.querySelector('.scroll-to-top').style.display = "block";
+            } else {
+                document.querySelector('.scroll-to-top').style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
