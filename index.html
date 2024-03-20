@@ -1,24 +1,97 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="/assets/uni.c1a8425b.css">
-
-    <meta charset="UTF-8" />
-    <script>
-      var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
-        CSS.supports('top: constant(a)'))
-      document.write(
-        '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
-        (coverSupport ? ', viewport-fit=cover' : '') + '" />')
-    </script>
-    <title></title>
-    <!--preload-links-->
-    <!--app-context-->
-    <script type="module" crossorigin src="/assets/index-5ad73b38.js"></script>
-    <link rel="stylesheet" href="/assets/index-aa8a14bb.css">
-  </head>
-  <body>
-    <div id="app"><!--app-html--></div>
-    
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电话卡销售</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .card p {
+            margin-bottom: 0;
+        }
+        .profile {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            width: 150px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>欢迎来到电话卡销售</h1>
+    </header>
+    <nav>
+        <a href="#">首页</a>
+        <a href="#">套餐</a>
+        <a href="#">充值</a>
+        <a href="#">关于我们</a>
+    </nav>
+    <main>
+        <div class="profile">
+            <img src="https://picss.sunbangyan.cn/2024/02/26/9013b468c3b207fc74825264ca088276.jpeg" alt="个人头像">
+            <h2>欢迎来到我的电话卡销售页面</h2>
+            <p>我是小娟娟，负责为您提供最优质的电话卡套餐和服务。</p>
+        </div>
+        <div class="card">
+            <h3>话费充值</h3>
+            <p>选择适合您的充值套餐，轻松充值话费。</p>
+        </div>
+        <div class="card">
+            <h3>流量套餐</h3>
+            <p>选择适合您的流量套餐，畅享高速上网体验。</p>
+        </div>
+        <div class="card">
+            <h3>国际漫游</h3>
+            <p>出国旅行，畅享畅通无阻的国际漫游服务。</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 电话卡销售</p>
+    </footer>
+</body>
 </html>
